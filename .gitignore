@@ -1,0 +1,7 @@
+.venv
+.DS_Store
+.env
+.chainlit
+.files
+__pycache__
+.azure

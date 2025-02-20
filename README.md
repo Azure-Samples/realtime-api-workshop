@@ -1,57 +1,43 @@
-# Project Name
+# Realtime API Workshop
 
-(short, 1-3 sentenced, description of the project)
+Build voice-enabled AI assistants using Azure OpenAI's Realtime API. Create a multi-agent system for customer service applications.
 
-## Features
+## Workshop Modules
 
-This project framework provides the following features:
-
-* Feature 1
-* Feature 2
-* ...
-
-## Getting Started
-
-### Prerequisites
-
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [repository name]
-3. ...
+| Module                | Focus                                 | Documentation                                            |
+| --------------------- | ------------------------------------- | -------------------------------------------------------- |
+| 1. WebSocket Basics   | Real-time Communication Fundamentals  | [Guide](./presentation-material/00-websocket-basics/README.md)                 |
+| 2. Function Calling   | Azure OpenAI Realtime API Integration | [Guide](./01-getting-started-function-calling/README.md) |
+| 3. Multi-Agent System | Customer Service Implementation       | [Guide](./02-building-multi-agent-system/README.md)      |
+| 4. Voice RAG          | Voice-Optimized Document Retrieval    | [Guide](./03-voice-rag/README.md)                        |
 
 
-## Demo
+## Setup
+1. Execute ``azd up`` from the root folder.
+2. The above command will setup your python env, provision Azure AI foundry Hub, Project and GPT4o-realtime-audio instance and will initialize .env file.
+3. Update the .env with the API Key of GPT4o-realtime-audio model. You can find the key in Azure portal
+4. Move to respective modules to further run/work on the workshop modules.
 
-A demo app is included to show how to use the project.
 
-To run the demo, follow these steps:
+## Additional resources
 
-(Add steps to start up the demo)
+### SDKs & Libraries
 
-1.
-2.
-3.
+The following SDKs and libraries can be used to integrate with the gpt-4o-realtime-api (preview) on Azure.
 
-## Resources
+| SDK/Library                                                | Description                                            |
+| ---------------------------------------------------------- | ------------------------------------------------------ |
+| [`openai-python`](https://github.com/openai/openai-python) | The official Python library for the (Azure) OpenAI API |
+| [`openai-dotnet`](https://github.com/openai/openai-dotnet) | The official .NET library for the (Azure) OpenAI API   |
 
-(Any additional resources or related projects)
+### Accelerators & Templates
 
-- Link to supporting information
-- Link to similar sample
-- ...
+| Accelerator                                                                                        | Description                                                                                                                                                                                   |
+| -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [VoiceRAG (aisearch-openai-rag-audio)](https://github.com/Azure-Samples/aisearch-openai-rag-audio) | A simple example implementation of the VoiceRAG pattern to power interactive voice generative AI experiences using RAG with Azure AI Search and Azure OpenAI's gpt-4o-realtime-preview model. |
+| [On The Road CoPilot](https://github.com/Azure-Samples/on-the-road-copilot)                        | A minimal speech-to-structured output app built with Azure OpenAI Realtime API.                                                                                                               |
+
+
+## Contributing
+
+Contributions welcome via pull requests.
