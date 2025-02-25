@@ -16,7 +16,10 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "uv sync --dev",
+	"postCreateCommand": {
+        "uv-sync": "uv sync --dev",
+        "install-azd": "curl -fsSL https://aka.ms/install-azd.sh | bash"
+    },
 
 	// Configure tool-specific properties.
 	"customizations": {
