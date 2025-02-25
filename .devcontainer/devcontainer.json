@@ -6,7 +6,8 @@
 	"image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
 	"features": {
 		"ghcr.io/devcontainers/features/azure-cli:1": {},
-		"ghcr.io/va-h/devcontainers-features/uv:1": {}
+		"ghcr.io/va-h/devcontainers-features/uv:1": {},
+		"ghcr.io/azure/azure-dev/azd:0": {}
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -16,10 +17,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": {
-        "uv-sync": "uv sync --dev",
-        "install-azd": "curl -fsSL https://aka.ms/install-azd.sh | bash"
-    },
+	"postCreateCommand": "uv sync --dev",
 
 	// Configure tool-specific properties.
 	"customizations": {
