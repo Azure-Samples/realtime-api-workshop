@@ -657,7 +657,7 @@ class RealtimeClient(RealtimeEventHandler):
         self.transcription_models = [{"model": "whisper-1"}]
         self.default_server_vad_config = {
             "type": "server_vad",
-            "threshold": 0.5,
+            "threshold": 0.8,
             "prefix_padding_ms": 300,
             "silence_duration_ms": 200,
         }
