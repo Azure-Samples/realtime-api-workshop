@@ -29,6 +29,13 @@ Build voice-enabled AI assistants using Azure OpenAI's Realtime API. Create a mu
 7. Make a copy of the `.env` file and put it in the respective module folder 
 8. Move to respective modules to further run/work on the workshop modules.
 
+### Get the realtime speech endpoint
+1. Navigate to Azure and open your Azure AI Foundry resource [AI Foundry](https://ai.azure.com/)
+2. Go to "Models + endpoints"
+3. Choose "Service Endpoints"
+4. Pick your AI resource, in this scenario: `Azure AI Speech`
+5. Copy the `Resource endpoint` and `Primary Key`
+
 ## Additional resources
 
 ### WebSocket Basics
