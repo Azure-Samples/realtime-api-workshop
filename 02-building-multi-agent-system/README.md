@@ -149,7 +149,30 @@ Test your implementation with queries like:
 "How much was my bill for December?"
 ```
 
-#### Solution
+
+
+2. Update `chat.py` to import and register the new assistant:
+```python
+# Import the new billing assistant
+from agents.billing import billing_assistant
+
+async def setup_openai_realtime():
+    # ... existing setup code ...
+
+    # Register all agents with the realtime client
+    openai_realtime.assistant.register_agent(activation_assistant)
+    openai_realtime.assistant.register_agent(sales_assistant)
+    openai_realtime.assistant.register_agent(technical_assistant)
+    openai_realtime.assistant.register_agent(billing_assistant)  # Add the new billing assistant
+    
+    # Always register the root agent last
+    # This ensures every agent knows about each other and the path to the root agent
+    openai_realtime.assistant.register_root_agent(root_assistant)
+```
+
+<br/>
+<details>
+<summary><b>Code solution (click to expand)</b> </summary>
 If you'd like to see a complete solution, here's how you could implement the Billing Assistant:
 
 1. Create `agents/billing.py`:
@@ -219,25 +242,8 @@ billing_assistant = {
     ]
 }
 ```
-
-2. Update `chat.py` to import and register the new assistant:
-```python
-# Import the new billing assistant
-from agents.billing import billing_assistant
-
-async def setup_openai_realtime():
-    # ... existing setup code ...
-
-    # Register all agents with the realtime client
-    openai_realtime.assistant.register_agent(activation_assistant)
-    openai_realtime.assistant.register_agent(sales_assistant)
-    openai_realtime.assistant.register_agent(technical_assistant)
-    openai_realtime.assistant.register_agent(billing_assistant)  # Add the new billing assistant
-    
-    # Always register the root agent last
-    # This ensures every agent knows about each other and the path to the root agent
-    openai_realtime.assistant.register_root_agent(root_assistant)
-```
+</details>
+<br/>
 
 Key aspects of this solution:
 - Clear description of when to use (and not use) this agent
