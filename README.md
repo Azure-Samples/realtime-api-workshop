@@ -16,7 +16,8 @@ Build voice-enabled AI assistants using Azure OpenAI's Realtime API. Create a mu
 1. Execute ``azd up`` from the root folder.
 2. The above command will setup your python env, provision Azure AI foundry Hub, Project and GPT4o-realtime-audio instance and will initialize .env file.
 3. Update the .env with the API Key of GPT4o-realtime-audio model. You can find the key in Azure portal
-4. Move to respective modules to further run/work on the workshop modules.
+4. Make a copy of the `.env` file and put it in the respective module folder
+5. Move to respective modules to further run/work on the workshop modules.
 
 ### Using Devcontainer
 1. Install & Run Docker
@@ -25,7 +26,8 @@ Build voice-enabled AI assistants using Azure OpenAI's Realtime API. Create a mu
 4. Setup an Azure AI Foundry Hub + Project using the Azure Portal | [Guide](https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/create-projects?tabs=ai-studio)
 5. Create a deployment of either `gpt-4o-realtime-preview` or `gpt-4o-mini-realtime-preview` | [Guide](https://learn.microsoft.com/en-us/azure/ai-services/openai/realtime-audio-quickstart)
 6. Update the .env with the API Key of GPT4o-realtime-audio model. You can find the key in Azure AI Foundry portal under the deployment
-7. Move to respective modules to further run/work on the workshop modules.
+7. Make a copy of the `.env` file and put it in the respective module folder 
+8. Move to respective modules to further run/work on the workshop modules.
 
 ## Additional resources
 
