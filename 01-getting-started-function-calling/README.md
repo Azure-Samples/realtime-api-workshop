@@ -150,7 +150,23 @@ The assistant comes with two tools. Let's test them:
 Let's add a tool that helps users configure their mobile devices for internet access:
 
 1. Open `chat.py` and find the `main_assistant` configuration
-2. Add this new tool to the `tools` list:
+2. Add a new tool to the `tools` list:
+3. Restart the application and try these queries:
+   ```
+   "How do I set up internet on my iPhone?"
+   "Can you help me configure my Android phone for mobile data?"
+   "What are the APN settings for my device?"
+   ```
+
+4. Notice how:
+   - The assistant provides device-specific instructions
+   - Configuration steps are clear and easy to follow
+   - Technical details like APN settings are included when relevant
+
+
+<details>
+<summary><b>Code solution (click to expand)</b> </summary>
+
 ```python
 {
     "name": "get_mobile_internet_config",
@@ -181,18 +197,9 @@ Let's add a tool that helps users configure their mobile devices for internet ac
     }
 }
 ```
+</details>
 
-3. Restart the application and try these queries:
-   ```
-   "How do I set up internet on my iPhone?"
-   "Can you help me configure my Android phone for mobile data?"
-   "What are the APN settings for my device?"
-   ```
 
-4. Notice how:
-   - The assistant provides device-specific instructions
-   - Configuration steps are clear and easy to follow
-   - Technical details like APN settings are included when relevant
 
 ## Troubleshooting
 
